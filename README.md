@@ -6,6 +6,12 @@
 
 [Flujo de trabajo](https://github.com/WillishakespeareSKR13/Examen_React_1/blob/main/Examen_React.1.pdf)
 
+## Web Deployments
+
+[Production](https://examen-react-1-production.vercel.app/)
+
+[Development](https://examen-react-1-develop.vercel.app/)
+
 ## Run Locally
 
 Clone the project
@@ -103,7 +109,10 @@ import { SSP } from 'types';
 import { backgroundColorHoverFlat, backgroundColorOutline } from 'css';
 import { AtomButtonTypes } from './types';
 
-export const ButtonStyled = styled(motion.button)<AtomButtonTypes>`
+export const ButtonStyled =
+  styled(motion.button) <
+  AtomButtonTypes >
+  `
   width: max-content;
   height: max-content;
   padding: 8px 30px;
@@ -155,7 +164,7 @@ const IsDisabled: SSP<AtomButtonTypes> = (props) => {
 };
 ```
 
-## Git Flow 
+## Git Flow
 
 ![alt GitFlow](https://res.cloudinary.com/design-code-mx/image/upload/v1619492714/Stacklycode/Group_1521_bn3jax.svg)
 
