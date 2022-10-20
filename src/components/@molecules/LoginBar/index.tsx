@@ -64,6 +64,7 @@ const LoginBar = () => {
         css={() => css`
           flex-direction: row;
           width: max-content;
+          background-color: transparent;
           gap: 20px;
         `}
       >

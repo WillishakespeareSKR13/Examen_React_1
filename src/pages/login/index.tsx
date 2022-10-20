@@ -73,7 +73,6 @@ const PageLogin: NextPageFC = () => {
           type: 'success'
         });
         router.push('/employees');
-        setLoading(false);
       }, 2000);
     }
   });
@@ -82,6 +81,10 @@ const PageLogin: NextPageFC = () => {
     <AtomWrapper css={() => WrapperStyle}>
       <AtomWrapper
         as="form"
+        onSubmit={(e) => {
+          e?.preventDefault();
+          formik.handleSubmit();
+        }}
         autoComplete="new-off"
         css={() => css`
           width: max-content;
@@ -142,12 +145,9 @@ const PageLogin: NextPageFC = () => {
           Olvidé mi contraseña
         </AtomLink>
         <AtomButton
-          onClick={() => {
-            formik.handleSubmit();
-          }}
           loading={loading}
           astheme="primary"
-          type="button"
+          type="submit"
           css={() => css`
             padding: 10px 30px;
             margin: 25px 0px 0px 0px;

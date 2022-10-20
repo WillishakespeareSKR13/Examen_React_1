@@ -32,10 +32,14 @@ const Employees: NextPageFC = () => {
 
   const EmployeesWithDate = useMemo(
     () =>
-      data?.map((employee) => ({
-        ...employee,
-        birthday: new Date(employee?.birthday ?? 0).toISOString()?.split('T')[0]
-      })),
+      data
+        ?.map((employee) => ({
+          ...employee,
+          birthday: new Date(employee?.birthday ?? 0)
+            .toISOString()
+            ?.split('T')[0]
+        }))
+        ?.sort((a, b) => b.id - a.id),
     [data]
   );
 
