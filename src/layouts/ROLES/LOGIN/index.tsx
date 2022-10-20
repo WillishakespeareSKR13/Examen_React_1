@@ -9,7 +9,7 @@ type Props = {
 const AdminLayout: FC<Props> = (props) => {
   const { children } = props;
   return (
-    <AuthContext>
+    <AuthContext type="LOGIN">
       <LayoutAnimation>{children}</LayoutAnimation>
     </AuthContext>
   );

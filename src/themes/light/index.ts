@@ -4,11 +4,11 @@ import { IPalette } from 'types';
 const ThemeLight: IPalette = {
   button: {
     color: {
-      primary: '#3459A8',
+      primary: '#4d51e0',
       secondary: '#5a6a8a',
       accent: '#1461EB'
     },
-    type: 'flat',
+    type: 'flat'
   },
   wrapper: {
     color: {

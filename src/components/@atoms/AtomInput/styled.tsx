@@ -27,14 +27,20 @@ export const InputTextLabelStyled = styled(motion.label)<AtomInputTypes>(
   }
 );
 
-export const InputTextSpanStyled = styled(motion.span)<AtomInputLabelProps>`
-  padding: 0px 0px 4px 0px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0px 0px 0px 0px;
-  color: #222222;
-`;
+export const InputTextSpanStyled = styled(motion.span)<AtomInputLabelProps>(
+  (props) => {
+    const { theme } = props;
+    return css`
+      padding: 0px 0px 4px 0px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0px 0px 0px 0px;
+      color: #222222;
+      ${props?.css?.(theme)}
+    `;
+  }
+);
 
 export const InputTextStyled = styled(motion.input)<AtomInputInputProps>(
   (props) => {

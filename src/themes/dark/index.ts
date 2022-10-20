@@ -3,7 +3,7 @@ import { IPalette } from 'types';
 const ThemeDark: IPalette = {
   button: {
     color: {
-      primary: '#e52d27',
+      primary: '#4d51e0',
       secondary: '#db4a4a',
       accent: '#6b39bd'
     },

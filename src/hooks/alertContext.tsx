@@ -75,6 +75,7 @@ const AlertContext: FC<AlertContextProps> = ({ children, time }) => {
           z-index: 9999;
           padding: 10px;
           left: 50%;
+          background-color: transparent;
           transform: translateX(-50%);
         `}
       >
@@ -97,7 +98,11 @@ const AlertContext: FC<AlertContextProps> = ({ children, time }) => {
                 css={() => css`
                   width: 18px;
                   height: 15px;
-                  color: white;
+                  svg {
+                    path {
+                      fill: white;
+                    }
+                  }
                 `}
               />
               <AtomText

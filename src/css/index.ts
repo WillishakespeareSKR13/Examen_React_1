@@ -24,6 +24,11 @@ export const backgroundColorHoverFlat = (color: string) => css`
   }
 `;
 
+export const backgroundColorFlatButton = (color: string) => css`
+  ${backgroundColorFlat(color)};
+  ${backgroundColorHoverFlat(color)};
+`;
+
 export const backgroundColorOutline = (color: string) => css`
   background-color: transparent;
   border: 1px solid ${color};

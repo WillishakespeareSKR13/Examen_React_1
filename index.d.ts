@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextPage } from 'next';
-import { LayoutType } from '@Layouts/index';
 import type { AppInitialProps } from 'next/app';
 import { NextComponentType, NextPageContext } from 'next';
+import { LayoutType } from 'layouts/index';
 declare module 'next/app' {
   export declare type AppPropsWithLayout<P = any> = AppInitialProps & {
     Component: NextComponentType<NextPageContext, any, P> & LayoutType;

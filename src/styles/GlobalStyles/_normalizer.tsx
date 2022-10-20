@@ -20,11 +20,6 @@ const _NormalizerStyled: FC = () => {
         :root {
           font-size: 16px;
         }
-        html,
-        body,
-        #__next {
-          min-height: 100vh;
-        }
         html {
           width: 100%;
           overflow-x: hidden;

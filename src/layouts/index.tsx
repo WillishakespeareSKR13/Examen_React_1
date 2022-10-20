@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import ADMIN from './ROLES/ADMIN';
+import PRIVATE from './ROLES/PRIVATE';
 import DEFAULT from './ROLES/DEFAULT';
 import LOGIN from './ROLES/LOGIN';
 
 export const AllLayouts = {
   default: DEFAULT,
-  admin: ADMIN,
+  prvate: PRIVATE,
   login: LOGIN
 };
 

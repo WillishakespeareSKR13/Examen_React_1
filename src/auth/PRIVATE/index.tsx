@@ -3,12 +3,12 @@ import { TokenAtom } from 'jotais/token';
 import { useRouter } from 'next/router';
 import { FC } from 'react';
 
-const LOGIN: FC = (props) => {
+const PRIVATE: FC = (props) => {
   const { children } = props;
   const router = useRouter();
   const token = useAtomValue(TokenAtom);
-  if (token) router.push('/employees');
+  if (!token) router.push('/login');
   return <>{children}</>;
 };
 
-export default LOGIN;
+export default PRIVATE;
