@@ -47,7 +47,7 @@ const ModalAddImage: FC = () => {
         message: 'Empleado agregado correctamente',
         type: 'success'
       });
-      setImages(images);
+      setImages((prev) => [...prev, ...images]);
       setFiles([]);
       setLoading(false);
       setModal(false);
