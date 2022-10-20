@@ -3,14 +3,13 @@ import AtomTable from '@atoms/AtomTable';
 import AtomText from '@atoms/AtomText';
 import AtomWrapper from '@atoms/AtomWrapper';
 import { css } from '@emotion/react';
-import LoginBar from '@molecules/LoginBar';
 import ModalAddEmployee from '@molecules/ModalAddEmployee';
 import { backgroundColorFlatButton } from 'css';
 import { WrapperStyle } from 'css/wrappers';
 import { useSetAtom } from 'jotai';
 import { ModalAtom } from 'jotais/modal';
 import { NextPageFC } from 'next';
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import CONFIG from 'src/config';
 import useSWR from 'swr';
 
@@ -49,12 +48,11 @@ const Employees: NextPageFC = () => {
       `}
     >
       <ModalAddEmployee callback={() => mutate()} />
-      <LoginBar />
       <AtomWrapper
         css={() => css`
           padding: 40px 90px;
           width: 100%;
-          height: calc(100% - 80px);
+          height: 100%;
           align-items: flex-start;
           justify-content: flex-start;
           gap: 40px;

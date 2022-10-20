@@ -1,5 +1,6 @@
 import AtomButton from '@atoms/AtomButton';
 import AtomImage from '@atoms/AtomImage';
+import AtomLink from '@atoms/AtomLink';
 import AtomText from '@atoms/AtomText';
 import AtomWrapper from '@atoms/AtomWrapper';
 import { css } from '@emotion/react';
@@ -58,6 +59,38 @@ const LoginBar = () => {
         >
           {userLogin?.name ?? 'Nombre Apellido'}
         </AtomText>
+      </AtomWrapper>
+      <AtomWrapper
+        css={() => css`
+          flex-direction: row;
+          width: max-content;
+          gap: 20px;
+        `}
+      >
+        {[
+          {
+            id: 1,
+            label: 'Trabajadores',
+            path: '/employees'
+          },
+          {
+            id: 2,
+            label: 'Imagenes',
+            path: '/upload'
+          }
+        ]?.map((item) => (
+          <AtomLink
+            key={item.id}
+            link={item.path}
+            css={() => css`
+              font-weight: ${router.pathname === item.path ? '700' : '500'};
+              color: ${router.pathname === item.path ? '#4d51e0' : '#000000'};
+              cursor: pointer;
+            `}
+          >
+            {item.label}
+          </AtomLink>
+        ))}
       </AtomWrapper>
       <AtomButton
         onClick={() => {

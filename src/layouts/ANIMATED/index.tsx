@@ -27,10 +27,11 @@ const LayoutAnimation: FC<AtomWrapperTypes> = (props) => {
         {...props}
         {...animation}
         key={router.pathname}
-        css={() => css`
+        css={(theme) => css`
           height: 100vh;
           justify-content: flex-start;
           align-items: center;
+          ${props?.css?.(theme)}
         `}
       >
         {children}

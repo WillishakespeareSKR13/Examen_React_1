@@ -97,9 +97,11 @@ const _NormalizerStyled: FC = () => {
         }
         ::-webkit-scrollbar {
           width: ${theme?.scrollbar?.width ?? 8}px;
+          height: 8px;
         }
         ::-webkit-scrollbar-thumb {
           background: ${theme?.scrollbar?.thumb ?? '#5993ff'};
+          border-radius: 10px;
         }
         ::-webkit-scrollbar-track {
           background: ${theme?.scrollbar?.track ?? '#e6e6e6'};

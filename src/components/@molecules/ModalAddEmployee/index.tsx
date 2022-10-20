@@ -86,6 +86,7 @@ const ModalAddEmployee: FC<Props> = (props) => {
         width: 100vw;
         height: 100vh;
         position: fixed;
+        top: 0;
         justify-content: center;
         align-items: center;
         background-color: #00000010;

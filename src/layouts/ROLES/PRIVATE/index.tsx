@@ -1,3 +1,5 @@
+import { css } from '@emotion/react';
+import LoginBar from '@molecules/LoginBar';
 import AuthContext from 'hooks/authContext';
 import LayoutAnimation from 'layouts/ANIMATED';
 import { FC } from 'react';
@@ -10,7 +12,14 @@ const AdminLayout: FC<Props> = (props) => {
   const { children } = props;
   return (
     <AuthContext type="PRIVATE">
-      <LayoutAnimation>{children}</LayoutAnimation>
+      <LoginBar />
+      <LayoutAnimation
+        css={() => css`
+          height: calc(100vh - 80px);
+        `}
+      >
+        {children}
+      </LayoutAnimation>
     </AuthContext>
   );
 };
