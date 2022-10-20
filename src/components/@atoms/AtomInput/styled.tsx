@@ -22,6 +22,7 @@ export const InputTextLabelStyled = styled(motion.label)<AtomInputTypes>(
       text-align: left;
       font-weight: 500;
       ${theme?.input?.css?.(theme)}
+      ${props?.css?.(theme)}
     `;
   }
 );
@@ -48,6 +49,7 @@ export const InputTextStyled = styled(motion.input)<AtomInputInputProps>(
       width: 250px;
       border-radius: 4px;
       ${backgroundColorInput(theme?.input?.color?.[astheme] ?? '#ffffff')}
+      ${props?.css?.(theme)}
     `;
   }
 );
@@ -75,6 +77,7 @@ export const InputToggleLabelStyled = styled(motion.label)<AtomInputTypes>(
       text-align: left;
       font-weight: 500;
       ${theme?.input?.css?.(theme)}
+      ${props?.css?.(theme)}
     `;
   }
 );
@@ -109,6 +112,7 @@ export const InputToggleStyled = styled(motion.input)<AtomInputInputProps>(
       ${backgroundColorInputToggle(theme?.input?.color?.[astheme] ?? '#db4a4a')}
 
       ${backgroundColorInput(theme?.input?.color?.[astheme] ?? '#ffffff')}
+      ${props?.css?.(theme)}
     `;
   }
 );

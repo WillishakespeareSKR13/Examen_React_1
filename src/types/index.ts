@@ -1,9 +1,4 @@
-import {
-  Interpolation,
-  SerializedStyles,
-  Theme,
-  WithTheme
-} from '@emotion/react';
+import { SerializedStyles, Theme, WithTheme } from '@emotion/react';
 import { FC, ReactNode } from 'react';
 import { Palette } from 'themes/types';
 import { AnyEventObject, StateMachine } from 'xstate';
@@ -16,7 +11,7 @@ export type RDC = Record<string, unknown>;
 export type FCWC<P = RDC> = FC<P & ChildrenProps>;
 export type SSP<P = RDC> = (props: WithTheme<P, Theme>) => SerializedStyles;
 export type SSPS<P = RDC> = (props: WithTheme<P, Theme>) => string;
-export type CSS = Interpolation<Theme>;
+export type CSS = (theme: Theme) => SerializedStyles;
 export type IPalette = Palette;
 export type ThemesFamily = {
   select: {

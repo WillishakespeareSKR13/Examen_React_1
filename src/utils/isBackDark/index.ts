@@ -5,8 +5,8 @@ const isBackDark = (hex: string) => {
   const r = (rgb >> 16) & 0xff;
   const g = (rgb >> 8) & 0xff;
   const b = (rgb >> 0) & 0xff;
-  const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
-  return luma < 40;
+  const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  return luma < 40 ? '#535353' : '#FFFFFF';
 };
 
 export default isBackDark;

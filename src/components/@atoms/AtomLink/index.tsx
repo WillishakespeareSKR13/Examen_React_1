@@ -21,7 +21,7 @@ const LinkForewardRef = forwardRef<HTMLAnchorElement, AtomLinkProps>(
 
 LinkForewardRef.displayName = 'LinkForewardRef';
 
-const Link: FC<AtomLinkProps> = (props) => {
+const AtomLink: FC<AtomLinkProps> = (props) => {
   const { children, link } = props;
   return (
     <NextLink href={link ?? '/'} passHref>
@@ -30,4 +30,4 @@ const Link: FC<AtomLinkProps> = (props) => {
   );
 };
 
-export default Link;
+export default AtomLink;

@@ -1,5 +1,5 @@
 import AuthContext from 'hooks/authContext';
-import LayoutAnimation from 'layouts/_ANIMATED';
+import LayoutAnimation from 'layouts/ANIMATED';
 import { FC } from 'react';
 
 type Props = {

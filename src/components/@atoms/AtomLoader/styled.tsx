@@ -38,7 +38,7 @@ const TypeLoader = (type: AtomLoaderTypes['astype']) => {
 };
 
 export const LoaderContainer = styled(motion.div)<AtomLoaderTypes>((props) => {
-  const { astype } = props;
+  const { theme, astype } = props;
   return css`
     background-size: cover;
     background-attachment: fixed;
@@ -80,5 +80,6 @@ export const LoaderContainer = styled(motion.div)<AtomLoaderTypes>((props) => {
       }
     }
     ${TypeLoader(astype)}
+    ${props?.css?.(theme)};
   `;
 });

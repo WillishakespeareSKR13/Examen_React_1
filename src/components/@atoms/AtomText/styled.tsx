@@ -24,6 +24,7 @@ const TextStyle = (props: AtomTextTypesTheme) => {
     color: ${theme?.text?.color?.[astheme] ?? '#202124'};
     transition: all 0.3s ease-in-out;
     ${theme?.text?.css?.(theme)}
+    ${props?.css?.(theme)}
   `;
 };
 

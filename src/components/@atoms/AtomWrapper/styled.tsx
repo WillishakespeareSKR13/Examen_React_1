@@ -12,9 +12,6 @@ const AtomWrapperStyled: SSP<AtomWrapperTypes> = (props) => {
     max-width: 100%;
     border: none;
     outline: none;
-    min-height: initial;
-    max-height: initial;
-    height: max-content;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -33,7 +30,7 @@ const AtomWrapperStyled: SSP<AtomWrapperTypes> = (props) => {
     mix-blend-mode: normal;
     background-color: ${theme?.wrapper?.color?.[astheme] ?? '#fafafa'};
     transition: all 0.3s ease-in-out;
-    ${theme?.wrapper?.css?.(theme)}
+    ${props?.css?.(theme)}
   `;
 };
 

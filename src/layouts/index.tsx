@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import ADMIN from './ADMIN';
-import DEFAULT from './DEFAULT';
-import LOGIN from './LOGIN';
+import ADMIN from './ROLES/ADMIN';
+import DEFAULT from './ROLES/DEFAULT';
+import LOGIN from './ROLES/LOGIN';
 
 export const AllLayouts = {
   default: DEFAULT,
@@ -15,9 +15,9 @@ export type LayoutType = {
 };
 
 const LayoutContext: FC<LayoutType> = (props) => {
-  const { Layout, children, Role } = props;
+  const { Layout, children } = props;
   const GetLayout = AllLayouts[Layout || 'default'];
-  return <GetLayout Role={Role}>{children}</GetLayout>;
+  return <GetLayout>{children}</GetLayout>;
 };
 
 export default LayoutContext;

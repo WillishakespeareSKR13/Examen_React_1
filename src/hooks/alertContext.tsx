@@ -69,7 +69,7 @@ const AlertContext: FC<AlertContextProps> = ({ children, time }) => {
   return (
     <ContextAlert.Provider value={{ alert, setAlert }}>
       <AtomWrapper
-        css={css`
+        css={() => css`
           max-width: max-content;
           position: fixed;
           z-index: 9999;
@@ -82,7 +82,7 @@ const AlertContext: FC<AlertContextProps> = ({ children, time }) => {
           {alert.map((item) => (
             <AtomWrapper
               key={item.id}
-              css={css`
+              css={() => css`
                 margin: 0 0 20px 0;
                 flex-direction: row;
                 align-items: center;
@@ -94,14 +94,14 @@ const AlertContext: FC<AlertContextProps> = ({ children, time }) => {
             >
               <AtomIcon
                 icon={typeAlert[item.type].icon}
-                css={css`
+                css={() => css`
                   width: 18px;
                   height: 15px;
                   color: white;
                 `}
               />
               <AtomText
-                css={css`
+                css={() => css`
                   padding: 3px 0px 0px 15px;
                   color: white;
                   font-weight: 600;

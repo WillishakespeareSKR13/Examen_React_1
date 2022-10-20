@@ -26,6 +26,7 @@ export const ButtonStyled = styled(motion.button)<AtomButtonTypes>`
     ${CSSAsType(props)}
     ${IsDisabled(props)}
     ${props?.theme?.button?.css?.(props.theme)}
+    ${props?.css?.(props.theme)}
   `}
 `;
 
