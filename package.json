@@ -1,0 +1,51 @@
+{
+  "name": "boilerplate-next",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|d.ts)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|d.ts)\" --write",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "./**/*.{ts,js,jsx,tsx}": [
+      "npm run lint -- --fix",
+      "npm run format"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "formik": "2.2.9",
+    "framer-motion": "^5.0.0",
+    "graphql-request": "5.0.0",
+    "jotai": "1.7.0",
+    "next": "12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "uuid": "8.3.2",
+    "xstate": "4.33.6",
+    "yup": "0.32.11"
+  },
+  "devDependencies": {
+    "@emotion/eslint-plugin": "^11.5.0",
+    "@types/react": "^17.0.31",
+    "@types/react-dom": "^17.0.10",
+    "@types/uuid": "8.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^12.0.2",
+    "eslint-config-prettier": "^8.3.0",
+    "graphql": "^15.7.2",
+    "husky": "4.3.8",
+    "lint-staged": "^11.2.6",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  }
+}
