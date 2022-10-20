@@ -4,7 +4,7 @@
 
 [Repository](https://github.com/WillishakespeareSKR13/Examen_React_1)
 
-[Flujo de trabajo](https://github.com/WillishakespeareSKR13/Examen_React_1/Examen_React.1.pdf)
+[Flujo de trabajo](https://github.com/WillishakespeareSKR13/Examen_React_1/blob/main/Examen_React.1.pdf)
 
 ## Run Locally
 
