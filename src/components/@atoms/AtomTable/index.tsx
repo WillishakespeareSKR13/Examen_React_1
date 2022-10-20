@@ -46,7 +46,7 @@ type ISort = {
 };
 
 const AtomTable = <T extends object>(props: AtomTableTypes<T>) => {
-  const { columnscss, data, columns } = props;
+  const { columnscss, data, columns, css: cssTable } = props;
   const [take, setTake] = useState(10);
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState('');
@@ -111,16 +111,18 @@ const AtomTable = <T extends object>(props: AtomTableTypes<T>) => {
 
   const getArrayPagesShow = useMemo(
     () =>
-      dataChunks?.filter(
-        (_, index) =>
-          index >= Math.min(page - 2, dataChunks?.length - 5) &&
-          index <= Math.max(page + 2, 4)
-      ),
+      dataChunks
+        ?.map((_, index) => index)
+        ?.filter(
+          (_, index) =>
+            index >= Math.min(page - 2, dataChunks?.length - 5) &&
+            index <= Math.max(page + 2, 4)
+        ),
     [dataChunks, page]
   );
 
   return (
-    <AtomTableStyled>
+    <AtomTableStyled css={cssTable?.()}>
       <thead>
         {columns.filter((item) => item?.searchable).length > 0 && (
           <tr className="searchTR">
@@ -380,7 +382,7 @@ const AtomTable = <T extends object>(props: AtomTableTypes<T>) => {
                       overflow: hidden;
                     `}
                   >
-                    {getArrayPagesShow?.map((_, i) => (
+                    {getArrayPagesShow?.map((i) => (
                       <AtomButton
                         key={`page ${i}`}
                         onClick={() => setPage(i)}

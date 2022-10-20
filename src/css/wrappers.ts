@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 export const WrapperStyle = css`
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   width: 100%;
   flex-direction: row;
   justify-content: center;

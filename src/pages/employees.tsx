@@ -89,39 +89,53 @@ const Employees: NextPageFC = () => {
             Agrergar Empleado
           </AtomButton>
         </AtomWrapper>
-        <AtomTable
-          data={EmployeesWithDate}
-          columns={[
-            {
-              key: 'id',
-              title: <>ID</>,
-              sortable: true,
-              searchable: true,
-              view: (props) => <>{props?.id}</>
-            },
-            {
-              key: 'name',
-              title: <>Nombre</>,
-              sortable: true,
-              searchable: true,
-              view: (props) => <>{props?.name}</>
-            },
-            {
-              key: 'last_name',
-              title: <>Apellido</>,
-              sortable: true,
-              searchable: true,
-              view: (props) => <>{props?.last_name}</>
-            },
-            {
-              key: 'birthday',
-              title: <>Cumpleaños</>,
-              sortable: true,
-              searchable: true,
-              view: (props) => <>{props?.birthday}</>
-            }
-          ]}
-        />
+        <AtomWrapper
+          css={() => css`
+            flex: 1;
+            height: 100%;
+            justify-content: flex-start;
+          `}
+        >
+          <AtomTable
+            css={() => css`
+              height: max-content;
+              tbody {
+                max-height: 60vh;
+              }
+            `}
+            data={EmployeesWithDate}
+            columns={[
+              {
+                key: 'id',
+                title: <>ID</>,
+                sortable: true,
+                searchable: true,
+                view: (props) => <>{props?.id}</>
+              },
+              {
+                key: 'name',
+                title: <>Nombre</>,
+                sortable: true,
+                searchable: true,
+                view: (props) => <>{props?.name}</>
+              },
+              {
+                key: 'last_name',
+                title: <>Apellido</>,
+                sortable: true,
+                searchable: true,
+                view: (props) => <>{props?.last_name}</>
+              },
+              {
+                key: 'birthday',
+                title: <>Cumpleaños</>,
+                sortable: true,
+                searchable: true,
+                view: (props) => <>{props?.birthday}</>
+              }
+            ]}
+          />
+        </AtomWrapper>
       </AtomWrapper>
     </AtomWrapper>
   );

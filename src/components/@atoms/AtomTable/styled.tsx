@@ -6,7 +6,7 @@ type Types = {
   css?: SerializedStyles;
 };
 
-export const AtomTableStyled = styled(motion.table)`
+export const AtomTableStyled = styled(motion.table)<Types>`
   position: relative;
   border-collapse: collapse;
   table-layout: auto;
@@ -52,6 +52,7 @@ export const AtomTableStyled = styled(motion.table)`
     width: 100%;
     table-layout: fixed;
   }
+  ${({ css }) => css}
 `;
 
 export const AtomTbodyStyled = styled(motion.tbody)<Types>`
