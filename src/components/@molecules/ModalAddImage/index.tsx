@@ -95,7 +95,7 @@ const ModalAddImage: FC = () => {
             color: #313131;
           `}
         >
-          Agrergar imagenes
+          Agregar imagenes
         </AtomText>
         <AtomWrapper
           css={() => css`
@@ -119,7 +119,7 @@ const ModalAddImage: FC = () => {
               ${backgroundColorFlatButton('#4d51e0')}
             `}
           >
-            Agragar imagenes
+            Agregar imagenes
           </AtomButton>
         </AtomWrapper>
       </AtomWrapper>

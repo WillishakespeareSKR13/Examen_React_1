@@ -86,7 +86,7 @@ const Employees: NextPageFC = () => {
               ${backgroundColorFlatButton('#4d51e0')}
             `}
           >
-            Agrergar Empleado
+            Agregar Empleado
           </AtomButton>
         </AtomWrapper>
         <AtomWrapper

@@ -115,7 +115,7 @@ const ModalAddEmployee: FC<Props> = (props) => {
             color: #313131;
           `}
         >
-          Agrergar empleado
+          Agregar empleado
         </AtomText>
         <AtomWrapper
           css={() => css`
@@ -176,7 +176,7 @@ const ModalAddEmployee: FC<Props> = (props) => {
             ${backgroundColorFlatButton('#4d51e0')}
           `}
         >
-          Agragar empleado
+          Agregar empleado
         </AtomButton>
       </AtomWrapper>
     </AtomWrapper>

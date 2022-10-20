@@ -76,7 +76,7 @@ const Upload: NextPageFC = () => {
               ${backgroundColorFlatButton('#4d51e0')}
             `}
           >
-            Agrergar Imagenes
+            Agregar Imagenes
           </AtomButton>
         </AtomWrapper>
         <AtomWrapper
