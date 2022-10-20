@@ -51,6 +51,7 @@ const PageLogin: NextPageFC = () => {
             message: 'El usuario no está regislado en la base de datos',
             type: 'error'
           });
+          setLoading(false);
           return;
         }
         const isPassValid = password === userFind?.password;
@@ -60,6 +61,7 @@ const PageLogin: NextPageFC = () => {
             message: 'La contraseña es incorrecta',
             type: 'error'
           });
+          setLoading(false);
           return;
         }
         const token = jwt.sign(userFind, CONFIG?.SECRET);
