@@ -18,6 +18,7 @@ import CONFIG from 'src/config';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { AtomInputInputProps } from '@atoms/AtomInput/types';
+import { WrapperStyle } from 'css/wrappers';
 
 const initialValues = {
   email: '',
@@ -76,25 +77,10 @@ const PageLogin: NextPageFC = () => {
   });
 
   return (
-    <AtomWrapper
-      css={() => css`
-        height: 100vh;
-        width: 100%;
-        max-width: 1440px;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: #4d51e0;
-        background-image: url(https://storage.googleapis.com/bucket_ixuabs_general/Ixulabs/ADMIN/backgrounds-form/background-movite-transparent.png);
-      `}
-    >
+    <AtomWrapper css={() => WrapperStyle}>
       <AtomWrapper
         as="form"
         autoComplete="new-off"
-        onSubmit={(e) => {
-          e?.preventDefault();
-          formik.handleSubmit();
-        }}
         css={() => css`
           width: max-content;
           height: max-content;
@@ -154,9 +140,12 @@ const PageLogin: NextPageFC = () => {
           Olvidé mi contraseña
         </AtomLink>
         <AtomButton
+          onClick={() => {
+            formik.handleSubmit();
+          }}
           loading={loading}
           astheme="primary"
-          type="submit"
+          type="button"
           css={() => css`
             padding: 10px 30px;
             margin: 25px 0px 0px 0px;

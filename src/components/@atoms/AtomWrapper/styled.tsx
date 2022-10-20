@@ -23,7 +23,7 @@ const AtomWrapperStyled: SSP<AtomWrapperTypes> = (props) => {
     flex-wrap: wrap;
     box-shadow: none;
     border-radius: 0px;
-    overflow-x: auto;
+    overflow: hidden;
     z-index: 0;
     position: static;
     cursor: default;

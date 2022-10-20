@@ -38,13 +38,14 @@ const TypeLoader = (type: AtomLoaderTypes['astype']) => {
 };
 
 export const LoaderContainer = styled(motion.div)<AtomLoaderTypes>((props) => {
-  const { theme, astype } = props;
+  const { theme, astype, colorLoading } = props;
   return css`
     background-size: cover;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
+
     .lds-ring {
       display: inline-block;
       position: relative;
@@ -58,9 +59,11 @@ export const LoaderContainer = styled(motion.div)<AtomLoaderTypes>((props) => {
       width: 64px;
       height: 64px;
       margin: 8px;
+      border: 7px solid ${colorLoading || `#fe6a6a`};
       border-radius: 50%;
       animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-      border-color: #db4a4a transparent transparent transparent;
+      border-color: ${colorLoading || `#fe6a6a`} transparent transparent
+        transparent;
     }
     .lds-ring div:nth-of-type(1) {
       animation-delay: -0.45s;
@@ -79,6 +82,7 @@ export const LoaderContainer = styled(motion.div)<AtomLoaderTypes>((props) => {
         transform: rotate(360deg);
       }
     }
+
     ${TypeLoader(astype)}
     ${props?.css?.(theme)};
   `;

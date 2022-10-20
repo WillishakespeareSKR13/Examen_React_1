@@ -10,6 +10,17 @@ export type AtomInputInputProps = HTMLMotionProps<'input'> & {
   type?: InputType;
   css?: CSS;
 };
+
+export type AtomInputSelectProps = HTMLMotionProps<'select'> & {
+  astheme?: ThemeColorKeys;
+  type?: InputType;
+  css?: CSS;
+};
+export type AtomInputOptionProps = HTMLMotionProps<'option'> & {
+  astheme?: ThemeColorKeys;
+  type?: InputType;
+  css?: CSS;
+};
 export type AtomInputLabelProps = HTMLMotionProps<'label'> & {
   astheme?: ThemeColorKeys;
   css?: CSS;
@@ -25,6 +36,9 @@ export type AtomInputSpanProps = HTMLMotionProps<'span'> & {
 
 export type AtomInputTypes = {
   input?: AtomInputInputProps;
+  select?: AtomInputSelectProps;
+  option?: AtomInputOptionProps;
+  options?: { value: string | number; label: string; id: string }[];
   label?: AtomInputLabelProps;
   error?: AtomInputErrorProps;
   span?: AtomInputSpanProps;

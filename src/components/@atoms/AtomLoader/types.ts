@@ -4,4 +4,6 @@ export type AtomLoaderTypes = AtomWrapperTypes & {
   loading?: boolean | 'true' | 'false';
   astype?: 'small' | `fullscreen` | `button`;
   astheme?: '';
+  colorLoading?: string;
+  borderWidth?: string;
 };

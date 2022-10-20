@@ -6,6 +6,8 @@ import {
   AtomInputErrorProps,
   AtomInputInputProps,
   AtomInputLabelProps,
+  AtomInputOptionProps,
+  AtomInputSelectProps,
   AtomInputTypes
 } from './types';
 
@@ -54,21 +56,59 @@ export const InputTextStyled = styled(motion.input)<AtomInputInputProps>(
       height: 40px;
       width: 250px;
       border-radius: 4px;
+      color: #222222;
       ${backgroundColorInput(theme?.input?.color?.[astheme] ?? '#ffffff')}
       ${props?.css?.(theme)}
     `;
   }
 );
 
-export const InputErrorStyled = styled(motion.span)<AtomInputErrorProps>`
-  font-family: Montserrat, sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  color: #db4a4a;
-  height: 30px;
-  margin: 0px 0px 0px 0px;
-  padding: 5px 0px 0px 0px;
-`;
+export const InputSelectStyled = styled(motion.select)<AtomInputSelectProps>(
+  (props) => {
+    const { theme, astheme = 'primary' } = props;
+    return css`
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 0px 0px 0px 0px;
+      padding: 0px 0px 0px 15px;
+      height: 40px;
+      width: 250px;
+      border-radius: 4px;
+      color: #222222;
+      ${backgroundColorInput(theme?.input?.color?.[astheme] ?? '#ffffff')}
+      ${props?.css?.(theme)}
+    `;
+  }
+);
+
+export const InputOptionStyled = styled(motion.option)<AtomInputOptionProps>(
+  (props) => {
+    const { theme } = props;
+    return css`
+      font-size: 12px;
+      font-weight: 600;
+      color: #222222;
+      ${props?.css?.(theme)}
+    `;
+  }
+);
+
+export const InputErrorStyled = styled(motion.span)<AtomInputErrorProps>(
+  (props) => {
+    const { theme } = props;
+    return css`
+      font-family: Montserrat, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: #db4a4a;
+      height: 30px;
+      margin: 0px 0px 0px 0px;
+      padding: 5px 0px 0px 0px;
+      ${props?.css?.(theme)}
+    `;
+  }
+);
 
 export const InputToggleLabelStyled = styled(motion.label)<AtomInputTypes>(
   (props) => {

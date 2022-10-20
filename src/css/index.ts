@@ -13,7 +13,7 @@ export const backgroundColorHoverFlat = (color: string) => css`
     color: ${isBackDark(color)} !important;
   }
   .lds-ring div {
-    border: 2px solid ${isBackDark(color)};
+    border: 2px solid ${isBackDark(color)} !important;
     border-color: ${isBackDark(color)} transparent transparent transparent !important;
   }
   :hover {
@@ -68,7 +68,7 @@ export const colorIcon = (color: string) => css`
 
 export const backgroundColorInput = (color: string) => css`
   background-color: ${color};
-  color: ${isBackDark(color)};
+  color: #222222;
   border: 2px solid ${changeBrightness(color, -20)};
   ::placeholder {
     color: ${changeBrightness(isBackDark(color), 40)};

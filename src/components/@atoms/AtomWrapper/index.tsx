@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FC, forwardRef } from "react";
-import { AtomWrapperTypes } from "./types";
+import { FC, forwardRef } from 'react';
+import { AtomWrapperTypes } from './types';
 import {
   AtomWrapperDefaultStyled,
   AtomWrapperFormStyled,
@@ -9,59 +9,59 @@ import {
   AtomWrapperUlStyled,
   AtomWrapperMainStyled,
   AtomWrapperFooterStyled,
-  AtomWrapperNavStyled,
-} from "./styled";
+  AtomWrapperNavStyled
+} from './styled';
 
 const Animation = {
   transition: {
-    default: { duration: 0.3 },
+    default: { duration: 0.3 }
   },
   initial: { opacity: 0 },
   animate: { opacity: 1 },
-  exit: { opacity: 0 },
+  exit: { opacity: 0 }
 };
 
 const AtomWrapper: FC<AtomWrapperTypes> = forwardRef<any, AtomWrapperTypes>(
   (props, ref) => {
     const { as, children } = props;
     switch (as) {
-      case "form":
+      case 'form':
         return (
           <AtomWrapperFormStyled ref={ref} {...Animation} {...props}>
             {children}
           </AtomWrapperFormStyled>
         );
-      case "section":
+      case 'section':
         return (
           <AtomWrapperSectionStyled ref={ref} {...Animation} {...props}>
             {children}
           </AtomWrapperSectionStyled>
         );
-      case "li":
+      case 'li':
         return (
           <AtomWrapperLiStyled ref={ref} {...Animation} {...props}>
             {children}
           </AtomWrapperLiStyled>
         );
-      case "ul":
+      case 'ul':
         return (
           <AtomWrapperUlStyled ref={ref} {...Animation} {...props}>
             {children}
           </AtomWrapperUlStyled>
         );
-      case "main":
+      case 'main':
         return (
           <AtomWrapperMainStyled ref={ref} {...Animation} {...props}>
             {children}
           </AtomWrapperMainStyled>
         );
-      case "footer":
+      case 'footer':
         return (
           <AtomWrapperFooterStyled ref={ref} {...Animation} {...props}>
             {children}
           </AtomWrapperFooterStyled>
         );
-      case "nav":
+      case 'nav':
         return (
           <AtomWrapperNavStyled ref={ref} {...Animation} {...props}>
             {children}
