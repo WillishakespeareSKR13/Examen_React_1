@@ -6,6 +6,12 @@
 
 [Flujo de trabajo](https://github.com/WillishakespeareSKR13/Examen_React_1/blob/main/Examen_React.1.pdf)
 
+## Test User
+
+Email: skr13@outlook.com
+
+Password: 12345678
+
 ## Web Deployments
 
 [Production](https://examen-react-1-production.vercel.app/)
